@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1Ap | awk '{printf %s%s, (NR>1?,:), /bin/bash}' | LC_COLLATE=C sort -df | sed -e 's/^\.\{0,2\}$/&\//' -e 's/\([^\/]\)$/\1\//'
+ls -m -1Ap 

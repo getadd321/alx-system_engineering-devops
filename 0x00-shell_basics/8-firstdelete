@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
+rm /tmp/my_first_directory/betty
+=======
+>>>>>>> e14461ce11814e1806717ec6e5918333cc355dfd
 rm /tmp/my_first_directory/betty

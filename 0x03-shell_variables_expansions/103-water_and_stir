@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "${WATER}${STIR}" | tr "${water}${stir}" "0123456789abcdef" | sed 's/^/16#/' | xargs printf '%d\n' | tr "0123456789abcdef" "${bestchol}"
+echo "${WATER}${STIR}" | tr "${water}${stir}" "0123456789abcdef" | awk '{print strtonum("16#" $0)}' | tr "0123456789abcdef" "${bestchol}"

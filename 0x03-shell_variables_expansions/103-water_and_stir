@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(printf "%x\n" $((16#${WATER} + 16#${STIR})))
+echo "${WATER}${STIR}" | tr "${water}${stir}" "0123456789abcdef" | sed 's/^/16#/' | xargs printf '%d\n' | tr "0123456789abcdef" "${bestchol}"

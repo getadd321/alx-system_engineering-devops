@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f -iname '*.gif' -printf '%f\n' | tr '[:upper:]' '[:lower:]' | sort -f | uniq | cut -f 1 -d '.' | LC_ALL=C sort -f | paste -sd '\n'
+find –type f –name “*.gif” –printf “%f\n” | rev | cut –d ‘.’ –f  2- | rev | LC_ALL=C sort –f

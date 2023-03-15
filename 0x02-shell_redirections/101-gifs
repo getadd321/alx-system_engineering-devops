@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f \( -name ".*" -o -name "*.gif" \) -exec sh -c 'echo "{}" | rev | cut -d"/" -f1 | rev | cut -d"." -f1' \+ | sort -f
+find . -type f -iname '*.gif' -printf '%f\n' | tr '[:upper:]' '[:lower:]' | sort -f | uniq | cut -f 1 -d '.' | LC_ALL=C sort -f | tr '\n' '\0' | xargs -0 -L1 echo 
